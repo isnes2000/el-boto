@@ -6,9 +6,10 @@ stimulus = []
 response = []
 whatsaid = ""
 num = 0
+usertoclone = 'Fakeuser#1234'
 #get responses
 for i in range(1, int(kek.shape[0])):                     
-    if kek.loc[i,'Author'] == 'El Bapo#3613': 
+    if kek.loc[i,'Author'] == usertoclone: 
        if type(kek.loc[i-1,'Content']) is float:
            whatsaid += (str(kek.loc[i-1,'Attachments']))
        else:          
@@ -18,13 +19,13 @@ for i in range(1, int(kek.shape[0])):
     whatsaid = ""
 #get answer
 for i in range(0, kek.shape[0]):                     
-    if kek.loc[i,'Author'] == 'El Bapo#3613': 
+    if kek.loc[i,'Author'] == usertoclone: 
         if type(kek.loc[i,'Content']) is float:
            whatsaid += (str(kek.loc[i,'Attachments']))
         else:          
             whatsaid += (str(kek.loc[i,'Content']))
         if i < int(kek.shape[0]-1):
-            if kek.loc[i+1,'Author'] == 'El Bapo#3613': 
+            if kek.loc[i+1,'Author'] == usertoclone: 
                if type(kek.loc[i+1,'Content']) is float:
                    whatsaid += (str(kek.loc[i+1,'Attachments']))
                else:          
@@ -49,6 +50,6 @@ else:
         print(response[i], file = f)
         print(stimulus[i], file = h)
         print(response[i], file = j)
-#       if kek.loc[i-1,'Author'] == 'El Bapo#3613':
+#       if kek.loc[i-1,'Author'] == usertoclone:
 
     
