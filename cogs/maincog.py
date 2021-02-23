@@ -37,7 +37,7 @@ class elboto(commands.Cog):
         await ctx.send("Changed volume to {}%".format(volume))
 
     @commands.command()
-    async def fuckoff(self, ctx):
+    async def shutup(self, ctx):
         """Stops and disconnects the bot from voice"""
 
         await ctx.voice_client.disconnect()
@@ -84,9 +84,6 @@ class elboto(commands.Cog):
                     await message.channel.send("*dead meme")
                 if message.content.startswith('<:angery:506624600466259968>'):
                     await message.channel.send('<:magik:516450274672640001>')
-                if message.content.startswith('How was the afterlife?'):
-                    await message.channel.send('I was borderline retarded ')
-                    await message.channel.send('I was fucked')
 	
 
 def setup(bot):
