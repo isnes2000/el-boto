@@ -28,4 +28,4 @@ print(text_channel_list)
 
 client.load_extension("cogs.maincog")
 #client.add_cog(elboto(client))
-client.run('NTg4MTA5Mzg3MTgxMDY0MjAw.XZEijQ.UC69aulAv4ydImg52kgnbckDmiQ')
+client.run('TOKEN GOES HERE')
