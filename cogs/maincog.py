@@ -55,17 +55,15 @@ class elboto(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         channel = message.channel
+	usertoclone = 'fakeuser'
         print(message.channel.name)
         print(message.author.name)
         if message.content != "":
             if message.author == "El Boto":
                 return
             if message.author.bot: return
-            if message.channel.name == "el-botos-lab" or message.channel.name == "all-bots-lab" or message.channel.name == "el-bapos-crackshack" or message.author.name=="El Bapo": 
+            if message.channel.name == "el-botos-lab" or message.channel.name == "all-bots-lab" or message.channel.name == "el-bapos-crackshack" or message.author.name==usertoclone: 
                 await channel.send(chatbot.get_response(message.content))
-            #if message.author.name =="FAKEUSER#1234":
-                #if message.content.startswith('bonk'):
-                 #   await message.channel.send('kys')
             else:
                 if message.content.startswith('boto!sing'):
                     await message.channel.send('<:magik:516450274672640001>')
